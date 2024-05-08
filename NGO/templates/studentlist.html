@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<br>
+<div class="backbutton">
+  <button  onclick="location.href='/adminlogin'">Back</button>
+</div>
+<table class="table table-bordered border-secondary table-striped-columns table-primary">
+    <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Full name</th>
+          <th scope="col">class</th>
+          <th scope="col">family income</th>
+          <th scope="col">money needed</th>
+          <th scope="col">books needed</th>
+          <th scope="col">uniform needed</th>
+          <th scope="col">performance</th>
+          <th scope="col">gender</th>
+          <th scope="col">preference score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>{% for student in students %}</tr>
+          {% for key,value in student.items %}
+              <td>{{value}}</td>
+    {% endfor %}
+    <span>
+    <td><a class="btn btn-primary" href="{% url 'modify_student' student.id %}">Modify</a>
+    <a class="btn btn-primary" href="{% url 'delete_student' student.id %}">Delete</a></td>
+    
+    </span>
+    <br>
+{% endfor %}
+        </tbody>
+    </table>
+
+    {% endblock body %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}DonorsView{% endblock title %}
+{% block body %}
+<h1 class="h3 mb-3 fw-normal">DONORS</h1>
+<div class="backbutton">
+  <button  onclick="location.href='/adminlogin'">Back</button>
+</div>
+
+<table class="table table-bordered border-secondary table-striped-columns table-primary">
+    <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Username</th>
+          <th scope="col">Phone Number</th>
+          <th scope="col">Address</th>
+        </tr>
+      </thead>
+      <tbody>
+{% for donor in donor_list%}
+<tr><td>{{donor.user.first_name}}</td> <td> {{donor.user.username}}</td><td> {{donor.phone}}</td><td> {{donor.address}}</td><br></tr>
+{% endfor %}
+      </tbody>
+</table>
+{% endblock body %}

@@ -1,0 +1,101 @@
+/* Navbar styles */
+
+.navbar {
+  background-color: rgb(87, 142, 149); /* Navbar background color */
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 1px;
+  margin-top: 0px;
+}
+
+
+.navbar-brand {
+  font-size:30px; /* Navbar brand font size */
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center align items vertically */
+  color: black;
+}
+
+.navbar-links {
+  display: flex; /* Use flexbox to align items */
+  margin-left: auto; /* Push navbar links to the right */
+}
+
+.navbar-nav {
+  margin-left: auto; /* Push navbar items to the right */
+  display: flex; /* Display navbar items as flex */
+  flex-direction: row; /* Arrange navbar items in a row */
+}
+
+.navbar-nav .nav-link {
+  color: rgb(22, 20, 20); /* Navbar link text color */
+  margin-right: 15px; /* Add margin between navbar items */
+}
+
+/* Main content styles */
+.w3-content {
+  margin: auto; /* Center the main content horizontally */
+  max-width: 1200px; /* Max width of the main content */
+  padding: 20px; /* Add padding to the main content */
+}
+
+.w3-container {
+  padding: 20px; /* Add padding to container elements */
+}
+
+.w3-red {
+  background-color: #45757e; /* Red color for headers */
+  color: #fff; /* Text color for headers */
+  padding: 10px; /* Padding for headers */
+}
+
+/* Form styles */
+.form-label {
+  font-weight: bold; /* Bold font for form labels */
+}
+
+.form-control {
+  width: 100%; /* Full width for form controls */
+  padding: 10px; /* Padding for form controls */
+  margin-bottom: 20px; /* Margin bottom for form controls */
+}
+
+.checkbox {
+  margin-bottom: 20px; /* Margin bottom for checkboxes */
+}
+
+/* Button styles */
+.w3-button {
+  background-color: #333; /* Button background color */
+  color: #fff; /* Button text color */
+  padding: 10px 20px; /* Padding for buttons */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Button border radius */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.w3-button:hover {
+  background-color: #555; /* Button background color on hover */
+}
+.nav-link{
+  display: flex;
+  justify-content:right;
+  font-size: 20px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  margin: 10px;
+}
+
+.body{
+  padding-left:40px ;
+  margin-top: 200px;
+}
+
+.container{
+
+  margin-top: 0px;
+  padding-left: 10px;
+}
+.pragati{
+  background-color:rgb(202, 160, 160) ;
+}

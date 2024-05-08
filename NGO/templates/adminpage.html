@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin Page{% endblock title %}
+
+{% block body %}
+
+
+<style>
+    /* Customize image size within impact_mainbox__UpbqO */
+    .impact_mainbox__UpbqO {
+        display: inline-block;
+        text-align: center;
+        vertical-align: top; /* Align elements to the top of the container */
+        width: 23%; /* Adjust width to fit 4 items per row with spacing */
+        margin: 1%; /* Add margin for spacing between items */
+    }
+
+    .impact_mainbox__UpbqO img {
+        width: 100px; /* Adjust the width of the image */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure the image is a block element */
+        margin: 0 auto 10px; /* Center the image horizontally and add spacing below */
+    }
+
+    .impact_mainbox__UpbqO h2 {
+        font-size: 1.2em; /* Adjust the font size for the heading */
+        margin-bottom: 5px; /* Add spacing below the heading */
+    }
+
+    .impact_discr__BJiHs {
+        font-size: 0.9em; /* Adjust the font size for the description */
+        color: #666; /* Set text color for the description */
+        margin-bottom: 15px; /* Add spacing below the description */
+    }
+
+    .btn-outline-success {
+        background-color: transparent; /* Set button background to transparent */
+        border-color: #28a745; /* Set border color for the button */
+        color: #28a745; /* Set text color for the button */
+        transition: all 0.3s ease; /* Add transition for smoother hover effect */
+    }
+
+    .btn-outline-success:hover {
+        background-color: #28a745; /* Change background color on hover */
+        color: #fff; /* Change text color on hover */
+    }
+
+    /* Clearfix for proper alignment */
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    /* Center the container */
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+</style>
+
+<div class="container-fluid my-2">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+
+<div class="container">
+    <!-- Button: ADD Student -->
+    <div class="impact_mainbox__UpbqO" id="impact_add_student">
+        <img src="https://static.thenounproject.com/png/2960708-200.png" alt="Add Student">
+        <h2>Add Student</h2>
+        <div class="impact_discr__BJiHs">Add a new student to the system</div>
+        <form action="/addstudent">
+            <button type="submit" class="btn btn-outline-success">ADD Student</button>
+        </form>
+    </div>
+
+    <!-- Button: VIEW PLEDGE HISTORY -->
+    <div class="impact_mainbox__UpbqO" id="impact_view_pledge_history">
+        <img src="https://static.vecteezy.com/system/resources/previews/006/693/247/non_2x/list-icon-template-black-color-editable-list-icon-symbol-flat-sign-isolated-on-white-background-simple-logo-illustration-for-graphic-and-web-design-free-vector.jpg" alt="View Pledge History">
+        <h2>View Pledge History</h2>
+        <div class="impact_discr__BJiHs">View history of pledges made by donors</div>
+        <form action="/pledgehist">
+            <button type="submit" class="btn btn-outline-success">VIEW PLEDGE HISTORY</button>
+        </form>
+    </div>
+
+    <!-- Button: VIEW DONORS -->
+    <div class="impact_mainbox__UpbqO" id="impact_view_donors">
+        <img src="https://static.thenounproject.com/png/66591-200.png" alt="View Donors">
+        <h2>View Donors</h2>
+        <div class="impact_discr__BJiHs">View list of registered donors</div>
+        <form action="/viewDonor">
+            <button type="submit" class="btn btn-outline-success">VIEW DONORS</button>
+        </form>
+    </div>
+
+    <!-- Button: MANAGE INVENTORY -->
+    <div class="impact_mainbox__UpbqO" id="impact_manage_inventory">
+        <img src="data:image/jpeg;base64,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" alt="Manage Inventory">
+        <h2>Manage Inventory</h2>
+        <div class="impact_discr__BJiHs">Manage inventory of books and uniforms</div>
+        <form action="/maintaininv">
+            <button type="submit" class="btn btn-outline-success">MANAGE INVENTORY</button>
+        </form>
+    </div>
+
+    <!-- Button: MODIFY STUDENT DETAILS -->
+    <div class="impact_mainbox__UpbqO" id="impact_modify_student_details">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHrekmnF18s0WYEGv4P_DPG_FprVOUSJJ03Q&s" alt="Modify Student Details">
+        <h2>Modify Student Details</h2>
+        <div class="impact_discr__BJiHs">Update information of existing students</div>
+        <form action="/studentdetails">
+            <button type="submit" class="btn btn-outline-success">MODIFY STUDENT DETAILS</button>
+        </form>
+    </div>
+
+    <!-- Button: EDIT ESTIMATIONS -->
+    <div class="impact_mainbox__UpbqO" id="impact_edit_estimations">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_zlPMWKPfCGioMPb7MXqF09FhDy0f9ybixA&s" alt="Edit Estimations">
+        <h2>Edit Estimations</h2>
+        <div class="impact_discr__BJiHs">Modify estimation values for books and uniforms</div>
+        <form action="/editesttbl">
+            <button type="submit" class="btn btn-outline-success">EDIT ESTIMATIONS</button>
+        </form>
+    </div>
+
+    <!-- Button: WORKING STATUS -->
+    <div class="impact_mainbox__UpbqO" id="impact_working_status">
+        <img src="https://static.vecteezy.com/system/resources/previews/003/562/783/original/employment-status-rgb-color-icon-vector.jpg" alt="Working Status">
+        <h2>Working Status</h2>
+        <div class="impact_discr__BJiHs">Check current working status and funds</div>
+        <form action="/workingstats">
+            <button type="submit" class="btn btn-outline-success">WORKING STATUS</button>
+        </form>
+    </div>
+
+    <!-- Button: VIEW EXPENDITURE -->
+    <div class="impact_mainbox__UpbqO" id="impact_view_expenditure">
+        <img src="https://media.istockphoto.com/id/1348960860/vector/cost-rising-icon.jpg?s=612x612&w=0&k=20&c=jN3-xSCmOQo9OrOaznnjSKMWbVSS7ttAyFZqZLHMZ3c=" alt="View Expenditure">
+        <h2>View Expenditure</h2>
+        <div class="impact_discr__BJiHs">View details of expenditures made by the organization</div>
+        <form action="/viewexpenditure">
+            <button type="submit" class="btn btn-outline-success">VIEW EXPENDITURE</button>
+        </form>
+    </div>
+</div>
+{% endblock body %}
+</style>

@@ -1,0 +1,110 @@
+.page2{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(202, 160, 160);
+}
+
+.scroll {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 20px 0;
+    background-color:  rgb(87, 142, 149);
+    font-size: 40px;
+}
+
+.scroll h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.image {
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-content {
+    max-width: 600px;
+    text-align: left; 
+    border-radius: 10px;
+    background-color: rgb(201, 129, 129);
+    padding: 20px;
+}
+
+.about-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color:  rgb(224, 187, 187);
+    padding: 20px;
+    text-align: center;
+}
+
+.follow-us h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: auto;
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+.copyright p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.copyright a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.backbutton {
+    position: absolute; /* Set the button to absolute positioning */
+    top: 10px; /* Adjust top position */
+    right: 10px; /* Adjust right position */
+    margin-right: 0px; /* Reset margin-right */
+    background-color: #43494e;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 10px;
+    /* cursor: pointer; */
+}
+
+.backbutton:hover {
+    background-color: rgb(101, 34, 34);
+    cursor: pointer;
+}

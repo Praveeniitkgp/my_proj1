@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Estimates History{% endblock title %}
+{% block body %}
+<br>
+<div class="backbutton">
+  <button  onclick="location.href='/adminlogin'">Back</button>
+</div>
+<table class="table table-bordered border-secondary table-striped-columns table-primary">
+    <thead>
+        <tr>
+          <th scope="col">Expenditure Amount</th>
+          <th scope="col">Reason</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for expend in hist%}
+
+        <tr><td>  {{expend.expe}}  </td><td> {{expend.rec}}  </td><br>
+        {% endfor %}
+                   
+        </tbody>
+        <tr><td>Total = {{total.exp}}</td><td><a href={% url 'aexpend' %}>update</a></td></tr>
+    </table>
+{% endblock body %}
